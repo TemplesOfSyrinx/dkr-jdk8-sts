@@ -22,7 +22,7 @@ RUN mkdir -p ${IDE_HOME} && \
 
 ENV PATH=${PATH}:${STS_HOME}
 
-ENTRYPOINT [ \
-            "STS" \
-           ]
+#ENTRYPOINT [ \
+#            "STS" \
+#           ]
 
