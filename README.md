@@ -7,13 +7,15 @@ Docker container to run Spring Tool Suite with Java JDK 8
 
 # Example command: 
  ```
- x11docker templesofsyrinx/dkr-jdk8-sts
+ x11docker templesofsyrinx/dkr-jdk8-sts:{VERSION}
  ```
 
-# Without container isolation:
+# Without container isolation (less secure):
  ```
+ xhost +local:docker
  docker run --rm \
     --env DISPLAY=unix$DISPLAY \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
-    templesofsyrinx/dkr-jdk8-sts
+    --ipc host \
+    templesofsyrinx/dkr-jdk8-sts:{VERSION}
  ```
